@@ -61,4 +61,28 @@ void The_main_window::on_pushButton_clicked()
         Mane_Wind();
     }
 }
+static void Inf()
+{
+    if (Information == false)
+           Information = true;
+       else
+           Information = false;
+}
+
+void The_main_window::on_pushButton_2_clicked()
+{
+    Settings = false;
+    Inf();
+    if(Information == true)
+    {
+        ui->mage->clear();
+        ui->mage_2->clear();
+        ui->label_7->clear();
+        ui->label_8->clear();
+    }
+    if(Information == false)
+    {
+        Mane_Wind();
+    }
+}
 
