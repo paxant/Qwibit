@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/ressur">
+        <file>img/disconnect.png</file>
+        <file>img/connect.png</file>
+        <file>img/back.jpg</file>
+        <file>img/MINI.wav</file>
+        <file>img/backg.png</file>
+        <file>img/nah.wav</file>
+        <file>img/Vl.png</file>
+        <file>img/Tp.png</file>
+        <file>img/pref.png</file>
+        <file>img/err.png</file>
+        <file>img/inf.png</file>
+        <file>img/icon.png</file>
+        <file>img/power.png</file>
+        <file>img/TP_min.png</file>
+        <file>img/Vl_max.png</file>
+        <file>img/Vl_min.png</file>
+    </qresource>
+</RCC>

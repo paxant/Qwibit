@@ -27,6 +27,14 @@ The_main_window::~The_main_window()
 {
     delete ui;
 }
+void The_main_window::Clear_Inform()
+{
+    ui->Infor_txt->clear();
+}
+void The_main_window::Clear_Sett()
+{
+
+}
 void The_main_window::Mane_Wind()
 {
     QPixmap mage(":/ressur/img/Tp.png");
@@ -55,15 +63,17 @@ void The_main_window::on_pushButton_clicked()
         ui->mage_2->clear();
         ui->label_7->clear();
         ui->label_8->clear();
+        Clear_Inform();
     }
     if(Settings == false)
     {
         Mane_Wind();
+        Clear_Sett();
     }
 }
 static void Inf()
 {
-    if (Information == false)
+    if (Information  == false)
            Information = true;
        else
            Information = false;
@@ -79,9 +89,12 @@ void The_main_window::on_pushButton_2_clicked()
         ui->mage_2->clear();
         ui->label_7->clear();
         ui->label_8->clear();
+        Clear_Sett();
+        ui->Infor_txt->setText("ЗДЕСЬ ДОЛЖНА БЫТЬ ВАЖНАЯ ИНФОРМАЦИЯ, НЕ ЗНАЮ КАКАЯ \n Погрешность измерения влажности 5% \n Погрешность измерения температуры 2%");
     }
     if(Information == false)
     {
+        Clear_Inform();
         Mane_Wind();
     }
 }

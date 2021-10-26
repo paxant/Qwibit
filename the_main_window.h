@@ -23,6 +23,8 @@ private slots:
 private:
     Ui::The_main_window *ui;
     void Mane_Wind();
+    void Clear_Inform();
+    void Clear_Sett();
 };
 
 #endif // THE_MAIN_WINDOW_H
