@@ -16,5 +16,6 @@
         <file>img/TP_min.png</file>
         <file>img/Vl_max.png</file>
         <file>img/Vl_min.png</file>
+        <file>img/wifi.png</file>
     </qresource>
 </RCC>

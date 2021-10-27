@@ -33,7 +33,11 @@ void The_main_window::Clear_Inform()
 }
 void The_main_window::Clear_Sett()
 {
-
+    ui->t_min->clear();
+    ui->Vl_min->clear();
+    ui->Vl_max->clear();
+    ui->On->clear();
+    ui->Wifi->clear();
 }
 void The_main_window::Mane_Wind()
 {
@@ -64,6 +68,18 @@ void The_main_window::on_pushButton_clicked()
         ui->label_7->clear();
         ui->label_8->clear();
         Clear_Inform();
+        int gi = ui->t_min->width();
+        int hi = ui->t_min->height();
+        QPixmap t_min(":/ressur/img/TP_min.png");
+        QPixmap Vl_max(":/ressur/img/Vl_max.png");
+        QPixmap Vl_min(":/ressur/img/Vl_min.png");
+        QPixmap On(":/ressur/img/power.png");
+        QPixmap wifi(":/ressur/img/wifi.png");
+        ui->t_min->setPixmap(t_min.scaled(gi, hi, Qt::KeepAspectRatio));
+        ui->Vl_min->setPixmap(Vl_min.scaled(gi, hi, Qt::KeepAspectRatio));
+        ui->Vl_max->setPixmap(Vl_max.scaled(gi, hi, Qt::KeepAspectRatio));
+        ui->On->setPixmap(On.scaled(gi, hi, Qt::KeepAspectRatio));
+        ui->Wifi->setPixmap(wifi.scaled(gi, hi, Qt::KeepAspectRatio));
     }
     if(Settings == false)
     {
@@ -83,13 +99,13 @@ void The_main_window::on_pushButton_2_clicked()
 {
     Settings = false;
     Inf();
+    Clear_Sett();
     if(Information == true)
     {
         ui->mage->clear();
         ui->mage_2->clear();
         ui->label_7->clear();
         ui->label_8->clear();
-        Clear_Sett();
         ui->Infor_txt->setText("ЗДЕСЬ ДОЛЖНА БЫТЬ ВАЖНАЯ ИНФОРМАЦИЯ, НЕ ЗНАЮ КАКАЯ \n Погрешность измерения влажности 5% \n Погрешность измерения температуры 2%");
     }
     if(Information == false)
