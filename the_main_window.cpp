@@ -38,6 +38,11 @@ void The_main_window::Clear_Sett()
     ui->Vl_max->clear();
     ui->On->clear();
     ui->Wifi->clear();
+    ui->txt_t->clear();
+    ui->txt_Wifi->clear();
+    ui->txt_on->clear();
+    ui->txt_vl->clear();
+    ui->txt_vl1->clear();
 }
 void The_main_window::Mane_Wind()
 {
@@ -80,6 +85,11 @@ void The_main_window::on_pushButton_clicked()
         ui->Vl_max->setPixmap(Vl_max.scaled(gi, hi, Qt::KeepAspectRatio));
         ui->On->setPixmap(On.scaled(gi, hi, Qt::KeepAspectRatio));
         ui->Wifi->setPixmap(wifi.scaled(gi, hi, Qt::KeepAspectRatio));
+        ui->txt_t->setText("Температура срабатывания");
+        ui->txt_Wifi->setText("Беспроводная сеть");
+        ui->txt_on->setText("Принудительное включение");
+        ui->txt_vl->setText("Минимальная влажность");
+        ui->txt_vl1->setText("Максимальная влажность");
     }
     if(Settings == false)
     {
